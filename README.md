@@ -1,7 +1,9 @@
 # jQueryFunctions
 
 Lessons learned from our last time submitting pull requests:
+
 Please be sure to make a folder where you put your work! And name that folder something recognizable so that I can know whose it is!
+
 Do not nest git repos!
 
 1.  FORK this repo. This will give you your own remote repo.
