@@ -48,3 +48,13 @@ img{
   margin-left:200px;
   display:none;
 }
+.show{
+  display:none;
+}
+
+.red {
+  color:red;
+}
+.yellow {
+  color:yellow;
+}
