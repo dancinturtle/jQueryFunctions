@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta CHARSET="UTF-8">
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <title>jQuery</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                //red toggle
+                $("#toggleRed").click(function(){
+                    $("p").toggleClass("red", function(){
+                        if ($("p").hasClass("red")){
+                            return false;
+                        }
+                        else{
+                            return true;
+                        }
+                    });
+                });
+                //add red
+                $("#addRed").click(function(){
+                     $("p").addClass("red");
+                });
+                //remove red
+                $("#removeRed").click(function(){
+                     $("p").removeClass("red");
+                });
+
+                //slide toggle
+                $("#slideToggle").click(function(){
+                    $("p").slideToggle();
+                });
+
+                //slide up
+                $("#slideUp").click(function(){
+                    $("p").slideUp();
+                });
+
+                //slide down
+                $("#slideDown").click(function(){
+                    $("p").slideDown();
+                });
+
+                //append
+                $("#append").click(function(){
+                    $("p").append("<p>appended text</p>");
+                });
+
+                //toggle
+                $("#toggle").click(function(){
+                    $("p").toggle();
+                });
+
+                //hide
+                $("#hide").click(function(){
+                    $("p").hide();
+                });
+
+                //show
+                $("#show").click(function(){
+                    $("p").show();
+                });
+
+                //fade out
+                $("#fadeOut").click(function(){
+                    $("p").fadeOut();
+                }); 
+
+                //fade in
+                $("#fadeIn").click(function(){
+                    $("p").fadeIn();
+                });
+
+                //fade in and out
+                $("#fadeToggle").click(function(){
+                    $("p").fadeToggle();
+                });
+
+                //before
+                $("#before").click(function(){
+                    $("p").before("text ");
+                });
+
+                //after
+                $("#after").click(function(){
+                    $("p").after(" text");
+                });
+
+                //html
+                $("#html").click(function(){
+                    $(this).text($("#html").html());
+                });
+                
+                //attribute
+                $("#attr").click(function(){
+                    var attribute = $("p").attr("class");
+                    $("p").append(attribute);
+                });
+
+                //data
+                $("#data").click(function(){
+                    console.log($("body").data());
+                });
+            });
+            
+        </script>
+    </head>
+
+    <body>
+        <h1>Add/Remove Class</h1>
+        <button type="button" id="toggleRed">ToggleClass</button>
+        <button type="button" id="addRed">AddClass</button>
+        <button type="button" id="removeRed">RemoveClass</button>
+        <p class="dud class">Click the button to add class 'red' to this sentence.</p>
+        <hr>
+
+        <h1>Slide Toggle</h1>
+        <button type="button" id="slideToggle">SlideToggle</button>
+        <button type="button" id="slideUp">SlideUp</button>
+        <button type="button" id="slideDown">SlideDown</button>
+        <p>Click the button to slide toggle the sentenceses</p>
+        <hr>
+
+        <h1>Append</h1>
+        <button type="button" id="append">Append</button>
+        <p>Click to append a paragraph</p>
+        <hr>
+
+        <h1>Toggle</h1>
+        <button type="button" id="toggle">Hide/Show</button>
+        <button type="button" id="hide">Hide</button>
+        <button type="button" id="show">Show</button>
+        <p>Click to toggle</p>
+        <hr>
+
+        <h1>Fade Toggle</h1>
+        <button type="button" id="fadeToggle">FadeToggle</button>
+        <button type="button" id="fadeOut">FadeOut</button>
+        <button type="button" id="fadeIn">FadeIn</button>
+        <p>Click to fade in and out</p>
+        <hr>
+
+        <h1>Before/After</h1>
+        <button type="button" id="before">Before</button>
+        <button type="button" id="after">After</button>
+        <p>Click to add text before or after the sentence</p>
+        <hr>
+
+        <h1>.html</h1>
+        <p id="html">Click to turn this <button>dummy button</button> to html</p>
+        <hr>
+
+        <h1>.attr</h1>
+        <button type="button" id="attr">click to get attribute of p tag</button>
+        <hr>
+
+        <h1>Data</h1>
+        <button type="button" id="data">Data</button>
+        <p>logs data into the console</p>
+        <hr>
+    </body>
+</html>
