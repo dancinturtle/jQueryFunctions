@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title> JQuery Functions</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script>
+$(document).ready(function() {
+});
+	</script>
+</head>
+
+<body>
+
+<!-- HIDE BUTTON! HIDE BUTTON -->
+	<div id="hidebutton">
+
+		<button class="DefaultButton" id="hide">.hide</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .Hide </h1>
+		<h3 class="DefaultText"> Click on the Button to hide the image below!</h3>
+		<img src="http://lorempixel.com/200/200/city" class="DefaultImage" alt="random picture of nature">
+		
+
+		<script >
+		$( "#hide" ).click(function() {
+		 $( "#hidebutton img" ).hide();
+		});	
+		</script>
+
+	</div>
+<!-- SHOW BUTTON! SHOW BUTTON! -->
+	<div id="showbutton">
+
+		<button class="DefaultButton" id="show">.show</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .Show </h1>
+		<h3 class="DefaultText"> Click on the Button to see the image appear!!</h3>
+		
+
+		<script >
+		$( "#show" ).click(function() {
+		 $( "#hidebutton img" ).show();
+		});	
+		</script>
+
+	</div>
+<!-- TOGGLE BUTTON! TOGGLE BUTTON! -->
+	<div id="togglebutton">
+
+		<button class="DefaultButton" id="toggle">.toggle</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .Toggle </h1>
+		<h3 class="DefaultText"> Click on the Button to toggle the image below!</h3>
+		<img src="http://lorempixel.com/200/200/sports" class="DefaultImage" alt="random picture of sports">
+		
+		<script >
+		$( "#toggle" ).click(function() {
+		 $( "#togglebutton img" ).toggle();
+		});	
+		</script>
+
+	</div>
+
+<!-- SLIDEUP BUTTON! SLIDEUP BUTTON! -->
+	<div id="slideupbutton">
+
+		<button class="DefaultButton" id="slideup">.slideUp</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .slideUp </h1>
+		<h3 class="DefaultText"> Click on the Button to slide up the image below!</h3>
+		<img src="http://lorempixel.com/200/200/food" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#slideup").click(function() {
+		 $( "#slideupbutton img" ).slideUp();
+		});	
+		</script>
+
+	</div>
+<!-- SLIDEDOWN BUTTON! SLIDEDOWN BUTTON! -->
+	<div id="slidedownbutton">
+
+		<button class="DefaultButton" id="slidedown">.slideDown</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .slideDown </h1>
+		<h3 class="DefaultText"> Click on the Button to slide down the image above!</h3>
+	
+
+		<script >
+		$( "#slidedown" ).click(function() {
+		 $( "#slideupbutton img" ).slideDown();
+		});	
+		</script>
+	</div>
+<!-- SLIDETOGGLE BUTTON! SLIDETOGGLE BUTTON! -->
+	<div id="slidetogglebutton">
+
+		<button class="DefaultButton" id="slidetoggle">.slideToggle</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .slideToggle </h1>
+		<h3 class="DefaultText"> Click on the Button to slide toggle the image above!</h3>
+		<img src="http://lorempixel.com/200/200/nature" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#slidetoggle" ).click(function() {
+		 $( "#slidetogglebutton img" ).slideToggle();
+		});	
+		</script>
+	</div>
+<!-- FADEOUT BUTTON! FADEOUT BUTTON! -->
+	<div id="fadeoutbutton">
+
+		<button class="DefaultButton" id="fadeout">.fadeOut</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .fadeOut </h1>
+		<h3 class="DefaultText"> Click on the Button to fade out the image below!</h3>
+		<img src="http://lorempixel.com/200/200/nightlife" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#fadeout" ).click(function() {
+		 $( "#fadeoutbutton img" ).fadeOut();
+		});	
+		</script>
+	</div>
+<!-- FADEIN BUTTON! FADE IN BUTTON! -->
+	<div id="fadeinbutton">
+
+		<button class="DefaultButton" id="fadein">.fadeIn</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .fadeIn </h1>
+		<h3 class="DefaultText"> Click on the Button to fade in the image above!</h3>
+		
+	
+
+		<script >
+		$( "#fadein" ).click(function() {
+		 $( "#fadeoutbutton img" ).fadeIn();
+		});	
+		</script>
+	</div>
+<!-- ADD CLASS BUTTON! ADD CLASS BUTTON! -->
+	<div id="addclassbutton">
+
+		<button class="DefaultButton" id="addclass">.addClass</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .addClass </h1>
+		<h3 class="DefaultText"> Click on the Button to add the class "thickerborder" to the image below!</h3>
+		<img src="http://lorempixel.com/200/200/food" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#addclass" ).click(function() {
+		 $( "#addclassbutton img" ).addClass("thickerborder");
+		});	
+		</script>
+	</div>
+<!-- BEFORE BUTTON!! BEFORE BUTTON!! -->
+	<div id="beforebutton">
+
+		<button class="DefaultButton" id="before">.before</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .before </h1>
+		<h3 class="DefaultText"> Click on the Button to add 36 smiley faces before the image below!</h3>
+		<img src="http://lorempixel.com/200/200/food" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#before" ).click(function() {
+		 $( "#beforebutton img" ).before("☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺");
+		});	
+		</script>
+	</div>
+<!-- AFTER BUTTON! AFTER BUTTON! -->
+	<div id="afterbutton">
+
+		<button class="DefaultButton" id="after">.after</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .after </h1>
+		<h3 class="DefaultText"> Click on the Button to add 36 smiley faces after the image below!</h3>
+		<img src="http://lorempixel.com/200/200/nightlife" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#after" ).click(function() {
+		 $( "#afterbutton img" ).after("☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺");
+		});	
+		</script>
+	</div>
+<!-- APPEND BUTTON! APPEND BUTTON! -->
+	<div id="appendbutton">
+
+		<button class="DefaultButton" id="append">.append</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .append </h1>
+		<h3 class="DefaultText"> Click on the Button to add 36 smileyfaces after all the images!!!</h3>
+		<img src="http://lorempixel.com/200/200/nightlife" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#append" ).click(function() {
+		 $( ".DefaultTextbox" ).append("☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺");
+		});	
+		</script>
+	</div>
+<!-- HTML BUTTON!! HTML BUTTON!!  -->
+	<div id="htmlbutton">
+
+		<button class="DefaultButton" id="html">.html</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .html </h1>
+		<h3 class="DefaultText"> Click on the Button to replace everything with a list of 5 smiley faces! </h3>
+		<img src="http://lorempixel.com/200/200/nature" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#html" ).click(function() {
+		 $( ".DefaultTextbox" ).html("<ol><li>☺</li><li>☻</li><li>☹</li><li>😁</li><li>☺</li></ol>");
+		});	
+		</script>
+	</div>
+<!-- ATTR BUTTON! ATTR BUTTON! -->
+	<div id="attrbutton">
+
+		<button class="DefaultButton" id="attr">.attr</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .attr </h1>
+		<h3 class="DefaultText"> Click on the Button to change every image's class to "biggerpicture"</h3>
+		<img src="http://lorempixel.com/200/200/nature" class="DefaultImage" alt="random picture of food">
+	
+
+		<script >
+		$( "#attr" ).click(function() { 
+		 $( "img" ).attr("class","bigimage");
+		});	
+		</script>
+	</div>
+<!-- ATTR BUTTON! ATTR BUTTON! -->
+	<div id="valbutton">
+
+		<button class="DefaultButton" id="val">.val</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .val </h1>
+		<h3 class="DefaultText"> Click on the Button to change the value of the input below!</h3>
+		<input id="inputvalue" type="text" value="Click the button to see me change!">
+	
+
+		<script >
+		$( "#val" ).click(function() { 
+		 $( "#valbutton input" ).val("Goodjob!");
+		});	
+		</script>
+	</div>
+<!-- TEXT BUTTON!! TEXT BUTTON!! -->
+	<div id="textbutton">
+
+		<button class="DefaultButton" id="text">.text</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .text </h1>
+		<h3 class="DefaultText"> Click on the Button to change every title on the page!</h3>
+		
+	
+
+		<script >
+		$( "#text" ).click(function() { 
+		 $( ".DefaultTitle" ).text("Goodjob!");
+		});	
+		</script>
+	</div>
+<!-- DATA BUTTON! DATA BUTTON!  -->
+	<div id="databutton">
+
+		<button class="DefaultButton" id="dataa">.data</button>
+		<div class="DefaultTextbox">
+		<h1 class="DefaultTitle"> .data </h1>
+		<h3 class="DefaultText"> Click on the Button to change the data of every image to "size","200x200"! Check your console to see if the data was stored! </h3>
+		
+	
+
+		<script >
+	
+	$("#dataa").click(function(){
+		
+	$("img").data("size","200x200");
+		var imgdata = $( "#img" ).data();
+		value = "stored!";
+		console.log(value);
+ 	
+});
+		</script>
+	</div>
+
+
+
+</body>
+</html>
