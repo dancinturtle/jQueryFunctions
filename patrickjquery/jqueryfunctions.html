@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>jQuery Functions</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $("body").ready(function () {
+            $("img").hide();
+            $("#click").click(function () {
+                alert("handler for .click() called");
+            })
+            $("#hide").click(function () {
+                $("#hidethis").hide("slow");
+            })
+            $("#show").click(function () {
+                $("#hidethis").show("slow");
+            })
+            $("#toggle").click(function () {
+                $("h2").toggle("slow");
+            })
+            $("#slideDown").click(function () {
+                $("#slided").slideDown("slow");
+            })
+            $("#slideUp").click(function () {
+                $("#slided").slideUp("fast");
+            })
+            $("#slideToggle").click(function () {
+                $("#slidet").slideToggle(1000);
+            })
+            $("#fadeIn").click(function () {
+                $("#fadei").fadeIn(600);
+            })
+            $("#fadeOut").click(function () {
+                $("#fadei").fadeOut(600);
+            })
+            $("#addClass").click(function () {
+                $("p2").addClass("blue highlight");
+            })
+            $("#removeClass").click(function () {
+                $("p2").removeClass("blue highlight");
+            })
+            $("#before").click(function () {
+                $("#beforeafter").before("<p>This Paragraph is inserted before</p>");
+            })
+            $("#after").click(function () {
+                $("#beforeafter").after("<p>This Paragraph is inserted after</p>");
+            })
+            $("#append").click(function () {
+                $("#appendthis").append("<strong>Hello, I'm added to the end!</strong>");
+            })
+            $("#html").click(function () {
+                $("h3").html("<h4><b>HTML</b> with an bold after the button was click and change from h3 to h4</h4>");
+            })
+            $("#attr").click(function () {
+                var title = $("em").attr("title");
+                $("#forattr").text(title);
+            })
+            $("#val").click(function () {
+                var text = $(this).text();
+                $("input").val(text);
+            })
+            $("#textbutton").click(function () {
+                var str = $(".texttest:first").text();
+                $(".texttest:last").html(str);
+            })
+            $("#databutton").click(function () {
+                $("div").data("test", { good: "Very good", yummy: "Delicious" });
+                $("span:first").text($("div").data("test").good);
+                $("span:last").text($("div").data("test").yummy);
+            })
+        })
+    </script>
+</head>
+
+<body>
+    <h1>
+        Click
+    </h1>
+    <button id="click">.click</button>
+    <p>Click the Button!</p>
+    <h1>
+        Hide
+    </h1>
+    <button id="hide">.hide</button>
+    <p id="hidethis">Click the button! This gets hidden!</p>
+    <h1>
+        Show
+    </h1>
+    <button id="show">.show</button>
+    <p>Click this button! This will show the previously hidden item</p>
+    <h1>
+        Toggle
+    </h1>
+    <button id="toggle">.toggle</button>
+    <p>Click the button. It toggles the headers below to hidden. Click it again and toggle everything back to shown.</p>
+
+    <h2>
+        slideDown
+    </h2>
+    <button id="slideDown">.slideDown</button>
+    <p><img id="slided" src="whatintarnation.jpg" alt="doge what in tarnation"></p>
+    <h2>
+        slideUp
+    </h2>
+    <button id="slideUp">.slideUp</button>
+    <p>Click the button to slide up the picture above!</p>
+    <h2>
+        slideToggle
+    </h2>
+    <button id="slideToggle">.slideToggle</button>
+    <p><img id="slidet" src="whatintarnation.jpg" alt="doge what in tarnation"></p>
+    <h2>
+        fadeIn
+    </h2>
+    <button id="fadeIn">.fadeIn</button>
+    <p><img id="fadei" src="whatintarnation.jpg" alt="doge what in tarnation"></p>
+    <h2>
+        fadeOut
+    </h2>
+    <button id="fadeOut">.fadeOut</button>
+    <p>Fade out the image above!</p>
+    <h2>
+        addClass
+    </h2>
+    <button id="addClass">.addClass</button>
+    <br>
+    <p2>Clicking this button adds a classname to each of the specified elements. For this paragraph, adding the class will change
+        the text from black to blue. Click the button below to remove the class.</p2>
+    <br>
+    <button id="removeClass">.removeClass</button>
+    <h2>
+        Before
+    </h2>
+    <button id="before">.before</button>
+    <div id="beforeafter">Insert content specified by parameter before each element</div>
+    <h2>
+        After
+    </h2>
+    <button id="after">.after</button>
+    <p>Insert content specified by parameter after each element</p>
+    <h2>
+        Append
+    </h2>
+    <button id="append">.append</button>
+    <div id="appendthis">Click this button. Insert content, specified by parameter, to the end of each element in the set of matched elements:
+    </div>
+    <h3>
+        Html
+    </h3>
+    <button id="html">.html</button>
+    <p>.html is changing the html contents in your target to your new html</p>
+    <h2>
+        Attribute
+    </h2>
+    <button id="attr">.attr</button>
+    <p>Get the <em title="important, keyword">ATTRIBUTE</em> for the first element in the set of elements.
+        <br>The title of the emphasis is:
+        <div id="forattr"></div>
+    </p>
+    <h2>
+        Val
+    </h2>
+    <button id="val">.val</button>
+    <p>Get the current value of the first element in the set of matched elements or set the value of every matched element.
+        Button below takes the value of the button above.</p>
+    <input type="text" value="click a button">
+    <h2>
+        Text
+    </h2>
+    <button id="textbutton">.text</button>
+    <p class="texttest">Get the <b>combined</b> text contexts of each element in the set of matches elements, including their descendants</p>
+    <p class="texttest">
+    </p>
+    <h2>
+        Data
+    </h2>
+    <button id="databutton">.data</button>
+    <p>Store data associated with the element</p>
+    <p>The following is information stored about snacks
+        <div>
+            Snacks are
+            <span></span> and
+            <span></span>
+        </div>
+</body>
+
+</html>
