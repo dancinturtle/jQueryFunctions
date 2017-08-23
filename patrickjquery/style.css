@@ -1,0 +1,20 @@
+img{
+    height: 350px;
+    width: 350px;
+}
+.blue{
+    color: blue;
+}
+.highlight{
+    background: greenyellow;
+}
+h4{
+    color: purple;
+}
+em{
+    color: blue;
+    font-weight: bold;
+}
+#forattr{
+    color: red;
+}
