@@ -1,0 +1,50 @@
+p1 {
+
+  font-size:28px;
+  margin-left:30%;
+  text-align:center;
+  display:inline-block;
+}
+p{
+  padding-left:center;
+  text-align:center;
+}
+#wrapper{
+  display:inline-block;
+  height:auto;
+}
+body{
+  text-align:left;
+  display: inline-block;
+  width:950px;
+  height:auto;
+
+}
+#row_options{
+  width:100%;
+  display: inline-block;
+
+  height:auto;
+}
+
+
+#row_options2{
+  width:100%;
+  display: inline-block;
+}
+
+#row_options3{
+  width:100%;
+  display: inline-block;
+}
+
+
+#row_options4{
+  width:100%;
+  display: inline-block;
+}
+img{
+
+  margin-left:200px;
+  display:none;
+}
