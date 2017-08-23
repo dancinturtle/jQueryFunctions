@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("#hide").click(function(){
+                    $("#first").hide();
+                });
+                $("#show").click(function(){
+                    $("#first").show();
+                });
+                $("#toggle").click(function(){
+                    $("#first").toggle();
+                });
+                $("#slidedown").click(function(){
+                    $("#pic").slideDown();
+                });
+                $("#slideup").click(function(){
+                    $("#pic").slideUp();
+                });
+                $("#slidetoggle").click(function(){
+                    $("#pic").slideToggle();
+                });
+                $("#fadeout").click(function(){
+                    $("#logo1").fadeOut(1000);
+                    $("#logo2").fadeOut(2000);
+                    $("#logo3").fadeOut(3000);
+                });
+                 $("#fadein").click(function(){
+                    $("#logo1").fadeIn(1000);
+                    $("#logo2").fadeIn(2000);
+                    $("#logo3").fadeIn(3000);
+                });
+                $("#addclass").click(function(){
+                    $("#second").addClass("color");
+                });
+                $("#before").click(function(){
+                    $("#second").before(123);
+                });
+                $("#after").click(function(){
+                    $("#second").after("Celtics");
+                });
+                $("#append").click(function(){
+                    $("#second").append("Lakers");
+                });
+                $("#html").click(function(){
+                    $("#third").html("I Love <i>Coding</i>");
+                });
+                $("#attr").click(function(){
+                    $("#nba").attr("width", "1000");
+                });
+                $("#val").click(function(){
+                    $("input:text").val("Alex Pan");
+                });
+                $("#text").click(function(){
+                    $("#third").text("Hi Coding");
+                });
+                $("#copyme").click(function(){
+                    $("#end").data("quote", $("#datap").text());
+                });
+                $("#displayme").click(function(){
+                    alert($("#end").data("quote"));
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div class="function">
+            <h1>Click to Hide, Show, Toggle</h1>
+            <p class="first"> Hello World!!!</p>
+            <button type="button" id="hide">Click to Hide</button>
+            <button type="button" id="show">Click to Show</button>
+            <button type="button" id="toggle">Click to Toggle</button>
+        </div>
+
+        <div class="fuction">
+            <h1>Click to SlideDown, SlideUp, SlideToggle</h1>
+            <img id="pic" src="https://blogs-images.forbes.com/brianmazique/files/2017/07/DFgxsAHVwAAhYba-1200x675.jpg?width=960" alt="Isaiah Thomas">
+            <button type="button" id="slidedown">Click to SlideDown</button>
+            <button type="button" id="slideup">Click to SlidUp</button>
+            <button type="button" id="slidetoggle">Click to SlideToggle</button>
+        </div>
+
+        <div class="function">
+            <h1>Click to FadeIn, FadeOut</h1>
+            <img id="logo1" src="https://d3c5s1hmka2e2b.cloudfront.net/uploads/topic/image/5/CD_Logo1.png" alt="Coding Dojo Logo">
+            <img id="logo2" src="https://d3c5s1hmka2e2b.cloudfront.net/uploads/topic/image/5/CD_Logo1.png" alt="Coding Dojo Logo">
+            <img id="logo3" src="https://d3c5s1hmka2e2b.cloudfront.net/uploads/topic/image/5/CD_Logo1.png" alt="Coding Dojo Logo">
+            <button type="button" id="fadeout">Click to FadeOut</button>
+            <button type="button" id="fadein">Click to FadeIn</button>
+        </div>
+
+        <div class="function">
+            <h1>Click to AddClass, Before, After, Append</h1>
+            <p id="second">Hello World!!!</p>
+            <button type="button" id="addclass">Click to AddClass</button>
+            <button type="button" id="before">Click to Before</button>
+            <button type="button" id="after">Click to After</button>
+            <button type="button" id="append">Click to Append</button>
+        </div>
+
+        <div id="last">
+            <h1>Click to Html, Attr, Val, Text</h1>
+            <p id="third">Coding Dojo</p>
+            <img id="nba" src="https://www.logodesignlove.com/images/classic/nba-logo.jpg" alt="NBA Logo">
+            <p>Name: <input type="text" name="user"></p>
+            <button type="button" id="html">Click to Html</button>
+            <button type="button" id="attr">Click to Attr</button>
+            <button type="button" id="val">Click to Val</button>
+            <button type="button" id="text">Click to Text</button>
+        </div>
+
+        <div id="end">
+            <h1>Click for Data</h1>
+            <p id="datap">Boston Celtics</p>
+            <button id="copyme" type="button">Cope Me</button>
+            <button id="displayme" type="button">Display Me</button>
+        </div>
+    </body>
+</html>
