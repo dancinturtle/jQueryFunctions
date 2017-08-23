@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery</title>
+    <script src= 'http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+      $(document).ready(function () {
+        //alert('you opened the page');
+
+        $('#addCss').click(function () {
+          $('#add_css').css({color: "red"});
+        })
+
+        $('#hideMe').click(function () {
+          $('#hide').hide();
+        })
+
+        $('#showThat').click(function () {
+          $('#hide').show();
+        })
+
+        $('#togggle').click(function () {
+          $('#toggle').toggle();
+        })
+
+        $('#slideDown').click(function () {
+          $('#slide_down').slideDown();
+        })
+
+        $('#slideUp').click(function () {
+          $('#slide_up').slideUp();
+        })
+
+        $('#clickMe').click(function () {
+          //alert('cicked');
+          $('#slide_toggle').slideToggle();
+        })
+
+        $('#fade_in').click(function () {
+          $('#fadeIn').fadeIn();
+        })
+
+        $('#fade_out').click(function () {
+          $('#fadeOut').fadeOut();
+        })
+
+        $('#add_class').click(function () {
+          $('#top').addClass('hidden');
+        })
+
+        $('#before_').click(function () {
+          $('#before').before('<p>THIS LINE SHOULD HAVE BEEN ADDED BEFORE!</p>');
+        })
+
+        $('#after_').click(function () {
+          $('#after').after('<p>THIS LINE SHOULD HAVE BEEN ADDED AFTER!</p>');
+        })
+
+        $('#append_').click(function () {
+          $('.append').append('<p>THIS LINE SHOULD HAVE BEEN APPENDED AFTER!</p>');
+        })
+
+        $('#html_').click(function () {
+          $('#html').html('<p>This is the new HTML!</p>')
+        })
+
+        $('#attr_').click(function () {
+          $('#attr').attr("style", "color: blue;")
+        })
+
+        $('#butt').click(function () {
+          var val = $('#val').val();
+          $('#val_').html(val);
+        })
+
+        $('#text_').click(function () {
+          $('#text').text("This should be different.")
+        })
+
+        $('#data_').click(function () {
+          var data = $('.data').data("foo", 52);
+          console.log(data);
+        })
+
+      })
+
+
+
+    </script>
+    <style media="screen">
+      body {
+        text-align: center;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      button {
+        background-color: #05bc8e;
+        font-size: 15px;
+        border: 1px solid black;
+        border-radius: 5px;
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+      }
+    </style>
+  </head>
+  <body>
+
+  <div id="top">
+    <div class="AddCSS">
+      <h1>AddCSS</h1>
+      <p id="add_css">Click the button to change the font to red.</p>
+      <button id="addCss" type="button" name="button">AddCSS</button>
+    </div>
+
+    <div class="hide">
+      <h1>HideMe</h1>
+      <p id="hide">Click the button to hide me.</p>
+      <button id="hideMe"type="button" name="button">Hide</button>
+    </div>
+
+    <div class="show">
+      <h1>^ ShowThat ^</h1>
+      <p id="show">First hide the HideMe paragraph, then click the 'Show' button to show it again.</p>
+      <button id="showThat"type="button" name="button">Show</button>
+    </div>
+
+    <div class="toggle">
+      <h1>Toggle</h1>
+      <p id="toggle">This paragraph should toggle.</p>
+      <button id="togggle" type="button" name="button">Keep clicking</button>
+    </div>
+
+    <div class="slideDown">
+      <h1>SlideDown</h1>
+      <p id="slide_down" style="display: none">This paragraph should slide down.</p>
+      <button id="slideDown" type="button" name="button">Slide Down</button>
+    </div>
+
+    <div class="slideUp">
+      <h1>SlideUp</h1>
+      <p id="slide_up">This paragraph should slide up.</p>
+      <button id="slideUp" type="button" name="button">Slide Up</button>
+    </div>
+
+    <div class="slide_toggle">
+      <h1>SlideToggle</h1>
+      <p id="slide_toggle">This paragraph should slide toggle.</p>
+      <button id="clickMe" type="button" name="button">Keep clicking</button>
+    </div>
+
+    <div class="fadeIn">
+      <h1>FadeIn</h1>
+      <p id="fadeIn" style="display: none">This paragraph should fade in.</p>
+      <button id="fade_in" type="button" name="button">Fade In</button>
+    </div>
+
+    <div class="fadeOut">
+      <h1>FadeOut</h1>
+      <p id="fadeOut">This paragraph should fade out.</p>
+      <button id="fade_out" type="button" name="button">Fade Out</button>
+    </div>
+  </div>
+
+
+    <div class="addClass">
+      <h1>AddClass</h1>
+      <p id="addClass">Add the class 'hidden' to all content above here.</p>
+      <button id="add_class" type="button" name="button">Add Class</button>
+    </div>
+
+    <div class="before">
+      <h1>Before</h1>
+      <p id="before">Add a paragraph before this line.</p>
+      <button id="before_" type="button" name="button">Add A Line Before</button>
+    </div>
+
+    <div class="after">
+      <h1>After</h1>
+      <p id="after">Add a paragraph after this line.</p>
+      <button id="after_" type="button" name="button">Add A Line After</button>
+    </div>
+
+    <div>
+      <h1>Append</h1>
+      <div class="append">
+        <p>Append a paragraph after this line.</p>
+      </div>
+      <div class="append">
+        <p>And append a paragraph after this line.</p>
+      </div>
+      <button id="append_" type="button" name="button">Append A Line After Each Element</button>
+    </div>
+
+    <div class="html">
+      <h1>HTML</h1>
+      <p id="html">This line should change.</p>
+      <button id="html_" type="button" name="button">Change The HTML</button>
+    </div>
+
+    <div class="attr">
+      <h1>ATTR</h1>
+      <p id="attr" style="">The color of this line should change to blue.</p>
+      <button id="attr_" type="button" name="button">Change The Style Attribute</button>
+    </div>
+
+    <div class="val">
+      <h1>VAL</h1>
+      <p id="val_"></p>
+      <p>Select value from the dropdown menu.</p>
+      <select id="val">
+        <option>Show this</option>
+        <option>Or show this</option>
+        <option>Or show this one</option>
+      </select><br><br>
+      <p>Then click the button.</p>
+      <button id="butt" type="button" name="button">Click to change the top line.</button>
+    </div>
+
+    <div class="text">
+      <h1>Text</h1>
+      <p id="text">This text will change when the button is clicked.</p>
+      <button id="text_" type="button" name="button">Change The Text</button>
+    </div>
+
+    <div class="data">
+      <h1>Data</h1>
+      <p id="data">Click the button to console.log data.</p>
+      <button id="data_" type="button" name="button">Alert Data</button>
+    </div>
+
+  </body>
+</html>
