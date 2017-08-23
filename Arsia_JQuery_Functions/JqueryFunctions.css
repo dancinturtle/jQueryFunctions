@@ -1,0 +1,76 @@
+#header{
+    width: 1000px;
+    height: 100px;
+    background-color: silver;
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+}
+.workBox{
+    width: 1000px;
+    height: 250px;
+    background-color: white;
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+    font-size: 150%;
+}
+.makeParRed{
+    color: red;
+}
+#ToggleSquare{
+    width:40px;
+    height:40px;
+    background-color: blue;
+    position:relative;
+    left: 480px;
+}
+#SlideSquare{
+    width:40px;
+    height:40px;
+    background-color: green;
+    position:relative;
+    left: 480px;
+}
+#FadeSquare{
+    width:40px;
+    height:40px;
+    background-color: gold;
+    position:relative;
+    left: 480px;
+}
+#BAspan{
+    display: inline-block;
+}
+.newSquare{
+    width:40px;
+    height:40px;
+    background-color: red;
+    display: inline-block;
+    /* position:relative;
+    left: 380px; */
+}
+.blackSquare{
+    width:40px;
+    height:40px;
+    background-color: black;
+}
+#appendWorkBox{
+    width: 1000px;
+    height: 250px;
+    background-color: white;
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+    font-size: 150%;
+}
+#attrWorkBox{
+    width: 1000px;
+    height: 250px;
+    background-color: white;
+    border: 3px solid black;
+    display: block;
+    text-align: center;
+    font-size: 150%;
+}
+

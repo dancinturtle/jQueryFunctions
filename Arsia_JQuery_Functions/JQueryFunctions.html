@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>JQuery Functions!</title>
+        <meta charset="UTF-8">
+        <link type="text/css" href="JQueryFunctions.css" rel="stylesheet">
+        <script type="text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript">
+            
+            $(document).ready(function(){
+                $("#Hide").click(function(){
+                    $("#Hide-Show-Par").hide();
+                });
+                $("#Show").click(function(){
+                    $("#Hide-Show-Par").show();
+                });
+                $("#Toggle").click(function(){
+                    $("#ToggleSquare").toggle(1000);
+                });
+                $("#SlideDown").click(function(){
+                    $("#SlideSquare").slideDown(1000);
+                });
+                $("#SlideUp").click(function(){
+                    $("#SlideSquare").slideUp(1000);
+                });
+                $("#SlideToggle").click(function(){
+                    $("#SlideSquare").slideToggle(1000);
+                });
+                $("#FadeIn").click(function(){
+                    $("#FadeSquare").fadeIn(1000);
+                });
+                $("#FadeOut").click(function(){
+                    $("#FadeSquare").fadeOut(1000);
+                });
+                $("#AddClass").click(function(){
+                    $("#AddClassPar").addClass("makeParRed");
+                });   
+                $("#Before").click(function(){
+                    $("#BAspan").before(" TEST ");
+                });
+                $("#After").click(function(){
+                    $("#BAspan").after(" TEST ");
+                });        
+                $("#Append").click(function(){
+                    $("#appendWorkBox").append("<div class='newSquare'></div>");
+                }); 
+                $("#HTML").click(function(){
+                    $(".newSquare").html("<div class='blackSquare'></div>");
+                }); 
+                $("#Attr").click(function(){
+                    var id = $("#attrWorkBox").attr("id");
+                    $("#Text").click(function(){
+                        $("#placeHolder").text( id );
+                    }); 
+                }); 
+                $("#Val").click(function(){
+                    var text = $("#Val").text();
+                    $("#valInput").val( text );
+                }); 
+                $(".dataButton").click(function() {
+                    if ($(".dataButton").index(this) === 0){
+                        $(".dataButton").data( { "value": "1" });
+                    }
+                    else if ($(".dataButton").index(this) === 1){
+                        $(".dataButton").data( { "value": "2" });
+                    }
+                    else {
+                        $(".dataButton").data( { "value": "3" });
+                    }
+                    
+                    $("#dataSpan").text( "" + $(".dataButton").data( "value" ));
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="header">
+            <h3>JQuery Functions Assignment</h3>
+        </div>
+        <div class="workBox">
+            <h1>Hide/Show</h1>
+            <button id="Hide">Hide</button>
+            <button id="Show">Show</button>
+            <p id="Hide-Show-Par">Click Hide button to hide this paragraph. Click Show button to show the same paragraph.</p>        
+        </div>
+        <div class="workBox">
+            <h1>Toggle</h1>
+            <button id="Toggle">Toggle</button>
+            <p>Click Toggle button to display or hide this square: </p>
+            <div id="ToggleSquare"></div>
+        </div>
+        <div class="workBox">
+            <h1>Slide Up/Down/Toggle</h1>
+            <button id="SlideDown">Slide Down</button>
+            <button id="SlideUp">Slide Up</button>
+            <button id="SlideToggle">Slide Toggle</button>
+            <p>Click Slide Down or Slide Up  or Slide Toggle to display or hide or toggle this square:</p>
+            <div id="SlideSquare"></div>
+        </div>
+        <div class="workBox">
+            <h1>Fade In/Fade Out</h1>
+            <button id="FadeIn">Fade In</button>
+            <button id="FadeOut">Fade Out</button>
+            <p>Click Fade In or Fade Out  to display or hide this square:</p>
+            <div id="FadeSquare"></div>
+        </div>
+        <div class="workBox">
+            <h1>AddClass</h1>
+            <button id="AddClass">Add Class</button>
+            <p id="AddClassPar">Click button to add class 'red' to this paragraph.</p>
+        </div>
+        <div class="workBox">
+            <h1>Before/After</h1>
+            <button id="Before">Text Before</button>
+            <button id="After">Text After</button>
+            <p id="BeforeAfterPar">Click Before or After to insert 'TEST' before or after<span id="BAspan">' THIS '</span></p>
+        </div>
+        <div id="appendWorkBox">
+            <h1>Append/HTML</h1>
+            <button id="Append">Append</button>
+            <button id="HTML">HTML</button>
+            <p>Click Append to insert a new red square below. Then click HTML to change the color to black.</p>
+        </div>
+        <div id="attrWorkBox">
+            <h1>Attr</h1>
+            <button id="Attr">Attr</button>
+            <button id="Text">Text</button>
+            <p>Click Attr to get the id attribute of this box. Then click Text to print the id name below:</p>
+            <p id="placeHolder" >_____________</p>
+        </div>
+        <div class="workBox">
+            <h1>Val</h1>
+            <button id="Val">Val</button>
+            <p>Click Val button to copy its text in the input field.</p>
+            <input id="valInput" type="text">
+        </div>
+        <div class="workBox">
+            <h1>Data</h1>
+            <button class="dataButton">1</button>
+            <button class="dataButton">2</button>
+            <button class="dataButton">3</button>
+            <p>Click one of the buttons above.</p>
+            <p>You pressed: <span id="dataSpan" ></span></p>
+        </div>
+    </body>
+</html>
